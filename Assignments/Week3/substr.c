@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int find_substring(char *haystack, char *needle) {
+int find_substring(const char *haystack,const char *needle) {
     int i, j;
 
     for (i = 0; haystack[i] != '\0'; i++) {
