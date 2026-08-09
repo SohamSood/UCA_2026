@@ -84,3 +84,62 @@ int main() {
 
     return 0;
 }
+
+// class Tree {
+// public:
+//     int val = 0;
+//     int indexleft;
+//     int indexright;
+//     Tree* left = NULL;
+//     Tree* right = NULL;
+//     Tree() {
+    
+//     }
+//     Tree(int lefty,int righty) {
+//         indexleft = lefty;
+//         indexright = righty;
+//     }
+// };
+// class Solution {
+// public:
+//     Tree* root = new Tree();
+//     Tree* buildTree(int left,int right){
+//         if(left>right) return NULL;
+//         int mid = left+(right-left)/2;
+//         Tree* newnode = new Tree(left,right);
+//         if(left == right) return newnode;
+//         newnode->left = buildTree(left,mid);
+//         newnode->right = buildTree(mid+1,right);
+//         return newnode;
+//     }
+//     void add(int index,Tree* root) {
+//         if(root == NULL) return;
+//         root->val++;
+//         if(root->indexleft == root->indexright) return;
+//         int mid = root->indexleft + (root->indexright - root->indexleft)/2;
+//         if(index<=mid) {
+//             add(index,root->left);
+//         }else {
+//             add(index,root->right);
+//         }
+//     }
+//     int search(int left,int right,Tree* root) {
+//         if(root == NULL) return 0;
+//         if(root->val == 0) return root->val;
+//         if(root->indexleft >= left && root->indexright <= right) return root->val;
+//         if(root->indexleft > right || root->indexright < left) return 0;
+//         return search(left,right,root->left) + search(left,right,root->right);
+//     }
+//     vector<int> countSmaller(vector<int>& nums) {
+//         int maxelement = INT_MIN;
+//         int minelement = INT_MAX;
+//         for(int x:nums) maxelement = max(maxelement,x),minelement = min(minelement,x);
+//         root = buildTree(minelement,maxelement);
+//         // vector<int> ans(nums.size(),0);
+//         for(int i = nums.size()-1;i>=0;i--) {
+//             add(nums[i],root);
+//             ans[i] = search(minelement,nums[i]-1,root);
+//         }
+//         return ans;
+//     }
+// };

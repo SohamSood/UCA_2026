@@ -86,3 +86,66 @@ int main() {
 
     return 0;
 }
+// class Solution {
+// public:
+//     vector<string> removeComments(vector<string>& source) {
+
+//         vector<string> ans;
+//         bool inBlock = false;
+//         string line;
+
+//         for (string& s : source) {
+
+//             int i = 0;
+
+//             while (i < s.size()) {
+
+//                 if (!inBlock) {
+
+//                     // /*
+//                     if (i + 1 < s.size() &&
+//                         s[i] == '/' && s[i + 1] == '*') {
+
+//                         inBlock = true;
+//                         i += 2;
+//                     }
+
+//                     // //
+//                     else if (i + 1 < s.size() &&
+//                              s[i] == '/' && s[i + 1] == '/') {
+
+//                         break;
+//                     }
+
+//                     // normal character
+//                     else {
+//                         line += s[i];
+//                         i++;
+//                     }
+
+//                 }
+//                 else {
+
+//                     // */
+//                     if (i + 1 < s.size() &&
+//                         s[i] == '*' && s[i + 1] == '/') {
+
+//                         inBlock = false;
+//                         i += 2;
+//                     }
+//                     else {
+//                         i++;
+//                     }
+//                 }
+//             }
+
+//             // Block comment ended, so current line is complete
+//             if (!inBlock && !line.empty()) {
+//                 ans.push_back(line);
+//                 line.clear();
+//             }
+//         }
+
+//         return ans;
+//     }
+// };
