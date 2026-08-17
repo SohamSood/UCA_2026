@@ -11,12 +11,7 @@ void address_translation(uint32_t virtual_address) {
     // Calculate offset using mask 0xFFF
     offset = virtual_address & 0xFFF;
 
-    printf("[1A] Addr: 0x%08X -> Page: %u (0x%X), Offset: %u (0x%X)\n",
-           virtual_address,
-           page_number,
-           page_number,
-           offset,
-           offset);
+    printf("[1A] Addr: 0x%08X -> Page: %u (0x%X), Offset: %u (0x%X)\n",virtual_address,page_number,page_number, offset, offset);
 }
 
 int main() {
